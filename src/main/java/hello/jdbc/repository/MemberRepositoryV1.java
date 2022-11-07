@@ -51,7 +51,7 @@ public class MemberRepositoryV1 {
         ResultSet rs = null; //DB로부터 응답 결과를 받음
 
         try {
-            con = DBConnectionUtil.getConnection();
+            con = getConnection();
             pstmt = con.prepareStatement(sql);
             pstmt.setString(1, memberId);
 
